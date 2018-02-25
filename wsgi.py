@@ -8,7 +8,7 @@ application = Flask(__name__)
 def hello():
 	hostname = socket.gethostname()
 	with open("/mnt/output.log", "a") as logfile:
-    	logfile.write(str(datetime.now()) + " " + hostname)
+		logfile.write(str(datetime.now()) + " " + hostname)
 
 	logfile_content = ""
 	with open("/mnt/output.log", "r") as logfile:
