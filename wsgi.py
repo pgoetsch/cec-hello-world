@@ -14,7 +14,7 @@ def hello():
 	with open("/mnt/output.log", "r") as logfile:
 		logfile_content = logfile.readlines()
 
-	return "\n".join(logfile_content);
+	return "</br>".join(logfile_content);
 
 if __name__ == "__main__":
     application.run()
