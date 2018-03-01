@@ -10,10 +10,11 @@ def hello():
 	with open("/mnt/output.log", "a") as logfile:
 		logfile.write(str(datetime.now()) + " " + hostname + "\n")
 
-	logfile_content = ""
+	logfile_content = []
 	with open("/mnt/output.log", "r") as logfile:
-		logfile_content = logfile.read()
-		return logfile_content;
+		logfile_content = logfile.readlines()
+
+	return "\n".join(logfile_content);
 
 if __name__ == "__main__":
     application.run()
